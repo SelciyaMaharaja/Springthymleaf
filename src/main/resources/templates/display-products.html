@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Product List</title></head>
+<body>
+    <h2>All Products</h2>
+    <table border="1">
+        <tr><th>Name</th><th>Price</th><th>Category</th></tr>
+        <tr th:each="prod : ${products}">
+            <td th:text="${prod.name}"></td>
+            <td th:text="${prod.price}"></td>
+            <td th:text="${prod.category}"></td>
+        </tr>
+    </table>
+</body>
+</html>
